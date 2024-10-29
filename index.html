@@ -1,21 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Cloud Resume</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Resume</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> <!-- Added anime.js -->
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>My Cloud Resume</h1>
-    </header>
-    <section>
-      <p>Hello! I'm Mirunan, and this is my resume hosted in the cloud.</p>
-      <p>Visitor Count: <span id="visitor-count" class="visitor-count">Loading...</span></p>
-    </section>
+    <div class="container-fluid bg-dark text-light text-center p-5 logo-container">
+        <h1 class="display-3 neon-text">Mirunan</h1>
+        <h2 class="neon-subtitle">Web Developer : | : Cloud Enthusiast : | : Cyberpunk Aficionado</h2>
+    </div>
+    <div class="spark-container"></div>
+    
+    <div class="container my-5">
+        <h2 class="text-light">About Me</h2>
+
+        <ul class="neon" style="letter-spacing: 2px;">
+          <li style="padding-bottom: 9px;">
+              I am an enthusiastic student and aspiring cloud computing professional eager to kickstart my career in the tech industry.
+          </li>
+          <li  style="padding-bottom: 9px;">
+              My passion lies in building innovative solutions on AWS, where I explore and learn about cloud technologies and their potential to transform businesses.
+          </li>
+          <li  style="padding-bottom: 9px;">
+              Keen to apply my skills and knowledge to real-world projects, while continually expanding my expertise in cloud services and development.
+          </li>
+      </ul>
+      
+
+        
+        <h2 class="text-light">Skills</h2>
+        <ul class="neon" style="letter-spacing: 2px;">
+            <li style="padding-bottom: 9px;" >JavaScript</li>
+            <li style="padding-bottom: 9px;">React.js</li>
+            <li style="padding-bottom: 9px;">Node.js</li>
+            <li style="padding-bottom: 9px;">CSS & HTML</li>
+        </ul>
+
+        <h2 class="text-light">Contact</h2>
+        <p class="text-muted">Email: <span class="neon">johndoe@example.com</span></p>
+        <p class="text-muted">LinkedIn: <a href="#" class="text-light neon">linkedin.com/in/johndoe</a></p>
+    </div>
+
+    <div class="text-center visitor-count-container my-4">
+      <div class="visitor-count">
+          <span class="loading-text">Loading...</span>
+          <span class="count-text">Visitor Count: <span id="visitor-number">1234</span></span>
+      </div>
   </div>
-  <script src="js/script.js"></script>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script> <!-- Custom script for sparks -->
 </body>
 </html>

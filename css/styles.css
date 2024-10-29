@@ -1,75 +1,205 @@
-/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap');
 
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
-    line-height: 1.6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-  }
-  
-  /* Container */
-  .container {
-    max-width: 800px;
-    width: 100%;
+body {
+    background-color: #121212;
+    font-family: 'Orbitron', sans-serif; /* Cyberpunk font */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive; /* Use a retro game font for the name */
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #ff00ff;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif; /* Keep Orbitron for subtitles */
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.logo-container {
+    position: relative;
+    background: linear-gradient(135deg, #6600ff, #ff00ff); /* Cool purple gradient */
+    padding: 80px 0; /* Increased padding for a larger logo effect */
+    border-bottom: 5px solid #ff00cc;
+    border-top: 5px solid #ff00ff;
+}
+
+.neon {
+    color: #00ffcc;
+}
+
+.neon-text {
+    color: #ffccff; /* Light purple */
+    animation: flicker 0.8s infinite alternate; /* Flicker animation */
+}
+
+.neon-subtitle {
+    color: #ffcc00; /* Bright yellow for better readability */
+    font-size: 2rem; /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    margin-top: 10px;
+    text-shadow: 0 0 5px #ffcc00, 0 0 10px #ff6600; /* Brighter shadow for better contrast */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for contrast */
+    padding: 5px 10px; /* Padding for better spacing */
+    border-radius: 5px; /* Rounded corners */
+    letter-spacing: 0.1em; /* Adjust spacing between letters */
+}
+
+.container {
+    border: 1px solid #00ffcc;
+    border-radius: 10px;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  /* Header */
-  header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    color: #007acc;
-    margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 1.1rem;
-    color: #666;
-  }
-  
-  /* Visitor Counter */
-  .visitor-count {
-    font-size: 1.2rem;
-    color: #444;
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  /* Section */
-  section {
-    margin: 20px 0;
-  }
-  
-  section p {
-    margin-bottom: 10px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 2rem;
+    box-shadow: 0 0 20px #6600ff; /* Purple shadow */
+}
+
+a {
+    color: #00ffcc; /* Neon cyan */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff00ff; /* Pink on hover */
+}
+
+/* Wave Effect */
+.wave-container {
+    position: relative;
+    height: 100px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflow for a clean look */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+.wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%; /* Make it wide to create a wave effect */
+    height: 10px; /* Height of the wave */
+    background-color: white; /* White rectangle for the wave */
+    transform: translate(-50%, -50%);
+    border-radius: 50%; /* Make it a rounded rectangle */
+    animation: waveAnimation 2s linear infinite; /* Animation for the wave */
+}
+
+.ball {
+    position: absolute;
+    width: 20px; /* Size of the ball */
+    height: 20px; /* Size of the ball */
+    background-color: #000; /* Dark ball color */
+    border-radius: 50%; /* Make it a circle */
+    animation: ballAnimation 2s linear infinite; /* Animation for the ball */
+}
+
+/* Wave Animation */
+@keyframes waveAnimation {
+    0% {
+        transform: translate(-50%, -50%) translateX(-100%);
     }
-  
-    .container {
-      padding: 15px;
+    100% {
+        transform: translate(-50%, -50%) translateX(100%);
     }
-  }
-  
+}
+
+/* Ball Animation */
+@keyframes ballAnimation {
+    0% {
+        transform: translate(-50%, -50%) translateX(-100%) translateY(0); /* Start on the left */
+    }
+    50% {
+        transform: translate(-50%, -50%) translateX(0) translateY(-10px); /* Move up at the center */
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(100%) translateY(0); /* End on the right */
+    }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    10% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+    20% {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+    30% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    40% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(0.9);
+    }
+    60% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Background Animation */
+.bg-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(0, 0, 255, 0.1));
+    z-index: -1; /* Behind everything */
+    animation: gradientAnimation 6s ease infinite; /* Animate the background gradient */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+.visitor-count-container {
+  position: relative;
+  padding: 20px;
+  background: linear-gradient(90deg, #1c1c1c, #4b4b4b);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+}
+
+.visitor-count {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ff00; /* Neon green */
+  font-size: 24px;
+  text-shadow: 
+      0 0 5px #00ff00, 
+      0 0 10px #00ff00, 
+      0 0 20px #00ff00;
+  letter-spacing: 2px;
+}
+
+.loading-text {
+  display: block;
+  font-weight: bold;
+  animation: loading 1.5s infinite;
+}
+
+.count-text {
+  display: block;
+  margin-top: 10px;
+}
+
+@keyframes loading {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
